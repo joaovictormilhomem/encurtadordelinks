@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encurtador</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #2f3640;
+      color: white;
+      font-family: Roboto, sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      margin: 40px 0px;
+      width: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0px 15px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0;
+    }
+
+    .add-form {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+      background-color: #353b48;
+    }
+
+    .add-form input {
+      width: 100%;
+      padding: 7px;
+      border-radius: 10px;
+      border-color: #353b48;
+      margin: 5px;
+    }
+
+    .add-form button {
+      width: 100%;
+      padding: 7px;
+      border-radius: 10px;
+      border-color: #353b48;
+      margin: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Editar Link</h1>
+    </header>
+    <form action="/edit/<%=body.id%>" method="POST" class="add-form">
+      <input type="text" class="field" name="title" placeholder="Título" value="<%=body.title%>" required>
+      <input type="text" class="field" name="description" placeholder="Descrição" value="<%=body.description%>">
+      <input type="text" class="field" name="url" placeholder="URL" value="<%=body.url%>" required>
+      <button type="submit">Editar</button>
+    </form>
+  </div>
+</body>
+
+</html>
