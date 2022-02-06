@@ -53,6 +53,11 @@
       background-color: #353b48;
     }
 
+    .link-infos{
+      word-break: break-all;
+      padding-right: 10px;
+    }
+
     .link-title{
       margin: 0;
       font-size: 1.8rem;
@@ -60,6 +65,7 @@
     }
 
     .link{
+      font-size: 0.8rem;
       color: #818181;
       text-decoration: none;
       margin-top: 5px;
@@ -111,7 +117,7 @@
     </header>
     <% for(let index=0; index < links.length; index++) { %>
       <div id='<%=links[index]._id%>' class="link-box">
-        <div>
+        <div class="link-infos">
           <h2 class="link-title">
             <%=links[index].title%>
           </h2>
